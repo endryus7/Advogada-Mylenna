@@ -1,27 +1,27 @@
 .contato {
-  padding: 100px 0;
-  background: var(--cream);
+  padding: 88px 0;
+  background: var(--navy);
 }
 
 .contato__inner {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 72px;
   align-items: start;
 }
 
-.contato__title {
-  font-size: clamp(28px, 3vw, 40px);
-  color: var(--navy);
+.contato__titulo {
+  font-size: 36px;
+  color: #fff;
   margin-bottom: 16px;
   line-height: 1.2;
 }
 
 .contato__desc {
-  font-size: 15px;
-  color: var(--text-mid);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.75;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .contato__canais {
@@ -32,62 +32,49 @@
 
 .contato__canal {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  text-decoration: none;
-  transition: opacity var(--transition);
-}
-
-.contato__canal:hover {
-  opacity: 0.75;
+  align-items: flex-start;
+  gap: 14px;
 }
 
 .contato__canal-icon {
-  font-size: 22px;
-  width: 44px;
-  height: 44px;
-  background: var(--white);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 20px;
   flex-shrink: 0;
-  box-shadow: var(--shadow-sm);
+  margin-top: 2px;
 }
 
 .contato__canal strong {
   display: block;
   font-size: 13px;
   font-weight: 500;
-  color: var(--navy);
+  color: #fff;
   margin-bottom: 2px;
 }
 
 .contato__canal span {
   font-size: 12px;
-  color: var(--text-mid);
+  color: rgba(255, 255, 255, 0.55);
 }
 
-/* Form */
+/* FORMULÁRIO */
 .contato__form-wrap {
-  background: var(--white);
+  background: #fff;
   border-radius: var(--radius-xl);
-  padding: 40px 36px;
-  box-shadow: var(--shadow-md);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-lg);
 }
 
-.contato__form-title {
+.contato__form-titulo {
   font-family: var(--font-display);
   font-size: 22px;
   color: var(--navy);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   font-weight: 500;
 }
 
 .contato__form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 .contato__row {
@@ -105,95 +92,83 @@
 .contato__field label {
   font-size: 12px;
   font-weight: 500;
-  color: var(--navy);
-  letter-spacing: 0.02em;
+  color: var(--text-dark);
 }
 
 .contato__field input,
 .contato__field select,
 .contato__field textarea {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-dark);
   background: var(--cream);
-  border: 1.5px solid transparent;
+  border: 1px solid rgba(15, 42, 82, 0.12);
   border-radius: var(--radius-md);
-  padding: 11px 14px;
+  padding: 10px 14px;
   outline: none;
-  transition:
-    border-color var(--transition),
-    background var(--transition);
+  transition: border-color var(--transition);
   resize: vertical;
 }
 
 .contato__field input:focus,
 .contato__field select:focus,
 .contato__field textarea:focus {
-  border-color: var(--navy-light);
-  background: var(--white);
-}
-
-.contato__field input::placeholder,
-.contato__field textarea::placeholder {
-  color: var(--text-muted);
+  border-color: var(--navy);
 }
 
 .contato__submit {
   background: var(--navy);
-  color: var(--white);
-  font-size: 15px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 14px;
   font-weight: 500;
   padding: 14px;
   border-radius: var(--radius-md);
-  transition:
-    background var(--transition),
-    transform var(--transition);
+  border: none;
+  cursor: pointer;
   margin-top: 4px;
 }
 
 .contato__submit:hover {
-  background: var(--navy-soft);
-  transform: translateY(-1px);
+  background: var(--navy-light);
 }
 
 .contato__aviso {
   font-size: 11px;
   color: var(--text-muted);
   text-align: center;
-  margin-top: -4px;
 }
 
-.contato__success {
-  text-align: center;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.contato__success span {
-  font-size: 48px;
-}
-.contato__success h3 {
-  font-size: 22px;
-  color: var(--navy);
-  font-family: var(--font-display);
-}
-.contato__success p {
+.contato__sucesso {
+  padding: 24px;
+  background: #f0fdf4;
+  border-radius: var(--radius-md);
+  color: #166534;
   font-size: 14px;
-  color: var(--text-mid);
+  text-align: center;
 }
 
+/* TABLET */
 @media (max-width: 900px) {
   .contato__inner {
     grid-template-columns: 1fr;
     gap: 48px;
   }
+}
+
+/* MOBILE */
+@media (max-width: 560px) {
+  .contato {
+    padding: 64px 0;
+  }
+
   .contato__row {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
+
   .contato__form-wrap {
     padding: 28px 20px;
+    border-radius: var(--radius-lg);
   }
 }

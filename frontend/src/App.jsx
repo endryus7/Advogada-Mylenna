@@ -1,11 +1,10 @@
-import "./styles/global.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Hero from "./sections/Hero";
-import Sobre from "./sections/Sobre";
-import Atuacao from "./sections/Atuacao";
-import Depoimentos from "./sections/Depoimentos";
-import Contato from "./sections/Contato";
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Sobre from './components/Sobre'
+import Atuacao from './components/Atuacao'
+import Depoimentos from './components/Depoimentos'
+import Contato from './components/Contato'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
       </main>
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

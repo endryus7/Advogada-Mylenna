@@ -1,83 +1,85 @@
 .depoimentos {
-  padding: 100px 0;
-  background: var(--white);
+  padding: 88px 0;
+  background: #fff;
 }
 
-.depoimentos__grid {
+.dep__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 
-.depoimento__card {
+.dep__card {
   background: var(--blue-pale);
   border-radius: var(--radius-lg);
-  padding: 32px 28px;
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  transition:
-    box-shadow var(--transition),
-    transform var(--transition);
+  gap: 14px;
 }
 
-.depoimento__card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
-}
-
-.depoimento__stars {
+.dep__stars {
   color: var(--gold);
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 2px;
 }
 
-.depoimento__texto {
-  font-size: 14px;
+.dep__texto {
+  font-size: 13px;
   color: var(--text-mid);
   line-height: 1.75;
   font-style: italic;
   flex: 1;
 }
 
-.depoimento__autor {
+.dep__autor {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding-top: 16px;
+  gap: 10px;
+  padding-top: 14px;
   border-top: 1px solid rgba(15, 42, 82, 0.08);
 }
 
-.depoimento__avatar {
-  width: 40px;
-  height: 40px;
+.dep__avatar {
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: var(--navy);
-  color: var(--white);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
-  font-weight: 500;
   flex-shrink: 0;
 }
 
-.depoimento__autor strong {
+.dep__autor strong {
   display: block;
   font-size: 13px;
   font-weight: 500;
   color: var(--navy);
 }
 
-.depoimento__autor span {
+.dep__autor span {
   font-size: 11px;
   color: var(--text-muted);
 }
 
+/* TABLET */
 @media (max-width: 900px) {
-  .depoimentos__grid {
+  .dep__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 560px) {
+  .depoimentos {
+    padding: 64px 0;
+  }
+
+  .dep__grid {
     grid-template-columns: 1fr;
-    max-width: 480px;
-    margin: 0 auto;
   }
 }
