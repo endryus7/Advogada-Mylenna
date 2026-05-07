@@ -2,16 +2,6 @@ import { sobreTexto, valores } from '../data/siteData'
 import './Sobre.css'
 import fotoSobre from "../assets/Mylenna.png"
 
-// ─────────────────────────────────────────────────────────────
-// 👇 COMO ADICIONAR A FOTO DA SEÇÃO "SOBRE":
-//    1. Coloque o arquivo em: src/assets/foto-sobre.jpg
-//    2. Descomente a linha abaixo:
-// import fotoSobre from '../assets/foto-sobre.jpg'
-//
-//    3. Substitua a div.sobre__placeholder por:
-//       <img src={fotoSobre} alt="Dra. Mylenna Montezano" className="sobre__foto" />
-// ─────────────────────────────────────────────────────────────
-
 export default function Sobre() {
   return (
     <section className="sobre" id="sobre">

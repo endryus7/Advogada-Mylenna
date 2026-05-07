@@ -31,7 +31,7 @@ export default function Contato() {
 
     try {
       const response = await fetch(
-        'https://formsubmit.co/ajax/email@hotmail.com',
+        'https://formsubmit.co/ajax/endryusmontezano2@hotmail.com',
         {
           method: 'POST',
           headers: {

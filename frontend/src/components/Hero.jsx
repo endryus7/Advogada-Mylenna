@@ -44,17 +44,22 @@ export default function Hero() {
         {/* FOTO */}
         <div className="hero__visual">
           <div className="hero__frame">
-            
+
             <img src={fotoMylenna} alt="Dra. Mylenna Montezano" className="hero__foto" />
 
             {/* Card flutuante */}
             <div className="hero__card">
-              <span className="hero__card-icon">⚖️</span>
-              <div>
+              <div className="hero__card-avatar">⚖️</div>
+              <div className="hero__card-text">
+                <div className="hero__card-status">
+                  <span className="hero__card-dot" />
+                  <span>Disponível para consulta</span>
+                </div>
                 <strong>Dra. Mylenna Montezano</strong>
-                <span>Especialista em Família e Sucessões</span>
+                <span>Família e Sucessões</span>
               </div>
             </div>
+
           </div>
         </div>
 
