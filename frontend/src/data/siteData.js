@@ -76,7 +76,6 @@ export const depoimentos = [
 ]
 
 export const assuntos = [
-  'Selecione uma área',
   'Divórcio e Separação',
   'Guarda e Alimentos',
   'Inventário e Herança',

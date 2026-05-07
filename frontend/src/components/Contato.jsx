@@ -31,7 +31,7 @@ export default function Contato() {
 
     try {
       const response = await fetch(
-        'https://formsubmit.co/ajax/mylennamontezano@hotmail.com',
+        'https://formsubmit.co/ajax/email@hotmail.com',
         {
           method: 'POST',
           headers: {
@@ -155,8 +155,9 @@ export default function Contato() {
                   name="assunto"
                   value={form.assunto}
                   onChange={handleChange}
+                  required
                 >
-                  <option value="">Selecione um assunto</option>
+                  <option value="" disabled>Selecione um assunto</option>
 
                   {assuntos.map((a, i) => (
                     <option key={i} value={a}>
@@ -175,6 +176,7 @@ export default function Contato() {
                   placeholder="Descreva brevemente sua situação..."
                   value={form.mensagem}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
