@@ -135,6 +135,7 @@
   border: none;
   cursor: pointer;
   margin-top: 4px;
+  transition: background var(--transition);
 }
 
 .contato__submit:hover {
@@ -179,4 +180,16 @@
     padding: 28px 20px;
     border-radius: var(--radius-lg);
   }
+}
+
+/* Validação de telefone */
+.input--erro {
+  border-color: #dc2626 !important;
+  background: #fff5f5;
+}
+
+.campo__erro {
+  font-size: 11px;
+  color: #dc2626;
+  margin-top: -2px;
 }
