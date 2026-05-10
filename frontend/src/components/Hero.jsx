@@ -1,6 +1,6 @@
 import { advogada } from '../data/siteData'
 import './Hero.css'
-import fotoMylenna from '../assets/Mylenna.png'
+import fotoMylenna from '../assets/hero_image.jpg'
 
 export default function Hero() {
   return (
@@ -9,10 +9,15 @@ export default function Hero() {
 
         {/* TEXTO */}
         <div className="hero__texto">
-          <span className="hero__badge">Direito de Família e Sucessões</span>
-
           <h1 className="hero__titulo">
-            Advocacia <em>humana</em><br />para cada família
+            <span className="hero__titulo-topo">Advocacia</span>
+
+            <span className="hero__titulo-destaque">
+              familiar <em>humanizada</em>
+            </span>
+
+            <br />
+              e estratégica
           </h1>
 
           <p className="hero__desc">
@@ -28,16 +33,6 @@ export default function Hero() {
             <a href="#sobre" className="btn-ghost">
               Conheça a atuação
             </a>
-          </div>
-
-          <div className="hero__trust">
-            {advogada.stats.map((s, i) => (
-              <div key={i} className="hero__trust-item">
-                <span className="hero__trust-num">{s.num}</span>
-                <span className="hero__trust-label">{s.label}</span>
-                {i < advogada.stats.length - 1 && <div className="hero__trust-div" />}
-              </div>
-            ))}
           </div>
         </div>
 

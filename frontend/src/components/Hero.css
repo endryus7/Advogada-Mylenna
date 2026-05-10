@@ -55,9 +55,18 @@
   animation: fadeUp 0.7s ease both;
 }
 
+.hero__titulo-topo {
+  display: block;
+}
+
+.hero__titulo-destaque {
+  display: inline-block;
+}
+
 .hero__titulo em {
   color: var(--gold);
   font-style: italic;
+  font-weight: 400;
 }
 
 .hero__desc {
@@ -101,42 +110,6 @@
 
 .btn-ghost:hover {
   background: rgba(255, 255, 255, 0.08);
-}
-
-.hero__trust {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-
-.hero__trust-item {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  position: relative;
-}
-
-.hero__trust-num {
-  font-family: var(--font-display);
-  font-size: 22px;
-  color: #fff;
-  font-weight: 500;
-}
-
-.hero__trust-label {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 300;
-}
-
-.hero__trust-div {
-  width: 1px;
-  height: 34px;
-  background: rgba(255, 255, 255, 0.15);
-  position: absolute;
-  right: -11px;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 /* FOTO */

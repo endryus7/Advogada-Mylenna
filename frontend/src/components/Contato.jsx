@@ -6,7 +6,7 @@ const canais = [
   { icon: '📱', titulo: 'WhatsApp', valor: advogada.whatsapp },
   { icon: '✉️', titulo: 'E-mail', valor: advogada.email },
   { icon: '📍', titulo: 'Localização', valor: advogada.localizacao },
-  { icon: '🕐', titulo: 'Horário', valor: advogada.horario },
+  { icon: '🕐', titulo: 'Horário de Atendimento', valor: advogada.horario },
 ]
 
 /* Armazena os dados digitados no formulário */
@@ -31,7 +31,7 @@ export default function Contato() {
 
     try {
       const response = await fetch(
-        'https://formsubmit.co/ajax/endryusmontezano2@hotmail.com',
+        'https://formsubmit.co/ajax/montezano.advocacia@gmail.com',
         {
           method: 'POST',
           headers: {
@@ -131,6 +131,7 @@ export default function Contato() {
                     placeholder="(51) 9 9999-9999"
                     value={form.telefone}
                     onChange={handleChange}
+                    required
                   />
                 </div>
               </div>

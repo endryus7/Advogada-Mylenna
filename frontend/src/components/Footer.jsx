@@ -27,7 +27,7 @@ export default function Footer() {
           <strong>Contato</strong>
           <a href={advogada.whatsappLink} target="_blank" rel="noopener noreferrer">WhatsApp</a>
           <a href={`mailto:${advogada.email}`}>{advogada.email}</a>
-          <span>Porto Alegre, RS</span>
+          <span>R. Manoelito de Ornellas, n° 55 - 8° andar - Praia de Belas - Porto Alegre/RS, CEP 90110-230 </span>
         </div>
 
       </div>
@@ -35,7 +35,7 @@ export default function Footer() {
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
           <span>© {new Date().getFullYear()} {advogada.nome} — Todos os direitos reservados</span>
-          <span>{advogada.oab} Inscrita</span>
+          <span>{advogada.oab}</span>
         </div>
       </div>
     </footer>

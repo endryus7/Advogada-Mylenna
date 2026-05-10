@@ -14,7 +14,7 @@ export default function Sobre() {
 
           <div className="sobre__tag">
             <strong>Dra. Mylenna Montezano</strong>
-            <span>Especialista em Família e Sucessões</span>
+            <span>Especialista em Direito de Família e Sucessões</span>
           </div>
         </div>
 

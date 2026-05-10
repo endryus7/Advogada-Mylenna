@@ -2,23 +2,19 @@
 
 export const advogada = {
   nome: 'Mylenna Montezano',
-  oab: 'OAB/RS',
+  oab: 'OAB/RS 131.018',
   especialidade: 'Advogada · Família e Sucessões',
   whatsapp: '(51) 9 9319-1967',
   whatsappLink: 'https://wa.me/5551993191967',
-  email: 'contato@mylennamontezano.adv.br',
-  localizacao: 'Porto Alegre, RS — presencial e online',
-  horario: 'Segunda a sexta, 8h às 18h',
-  stats: [
-    { num: '4500+', label: 'Casos atendidos' },
-    { num: '8+',    label: 'Anos de experiência' },
-    { num: 'OAB',   label: 'RS Inscrita' },
-  ],
+  email: 'montezano.advocacia@gmail.com',
+  localizacao: 'R. Manoelito de Ornellas, n° 55 - 8° andar - Praia de Belas - Porto Alegre/RS, CEP 90110-230 ',
+  horario: 'Segunda à sexta-feira, 9h às 18h',
 }
 
 export const sobreTexto = [
-  'Com mais de 8 anos de experiência no Direito de Família e Sucessões, a Dra. Mylenna Montezano construiu sua trajetória com base em um atendimento humanizado e comprometido com cada cliente.',
-  'Formada e pós-graduada em Direito de Família, guarda de filhos, fluente em leis — mas também em emoções. Porque cada caso é único, assim como cada família.',
+  'Fundado por Mylenna Montezano, advogada formada pela Faculdade de Desenvolvimento do Rio Grande do Sul e mediadora capacitada pela Polícia Civil do Estado do Rio Grande do Sul, o escritório nasceu com o propósito de oferecer uma advocacia humanizada, estratégica e comprometida com a história e os direitos de cada cliente. Com mais de 7 anos de experiência dedicados ao Direito de Família e Sucessões, a atuação é pautada pela escuta, acolhimento e atendimento personalizado.',
+  'Cada caso é conduzido com sensibilidade, estratégia e firmeza técnica, sempre buscando soluções seguras e cuidadosas em demandas relacionadas a divórcio, guarda, alimentos, convivência familiar, união estável e violência doméstica.',
+  'Mais do que processos, o nosso compromisso está em cuidar das pessoas.',
 ]
 
 export const valores = [
@@ -29,56 +25,59 @@ export const valores = [
 
 export const areasAtuacao = [
   {
-    icon: '💍', titulo: 'Divórcio e Separação',
+    icon: '💍', titulo: 'Divórcio e Dissolução de União Estável',
     desc: 'Assessoria completa em divórcio consensual e litigioso, partilha de bens e dissolução de união estável.',
-    itens: ['Divórcio consensual', 'Divórcio litigioso', 'Partilha de bens', 'União estável'],
+    itens: ['Divórcio consensual', 'Divórcio litigioso', 'Partilha de bens', 'Dissolução de união estável'],
   },
   {
     icon: '👨‍👩‍👧', titulo: 'Guarda e Alimentos',
-    desc: 'Regulamentação de guarda compartilhada ou unilateral, fixação e revisão de alimentos.',
-    itens: ['Guarda compartilhada', 'Guarda unilateral', 'Fixação de alimentos', 'Revisão de alimentos'],
+    desc: 'Regulamentação de guarda e convivência familiar, fixação e revisão de alimentos.',
+    itens: ['Guarda compartilhada', 'Guarda unilateral', 'Fixação de alimentos', 'Revisão de alimentos', 'Regulamentação de visitas'],
   },
   {
-    icon: '📜', titulo: 'Inventário e Herança',
-    desc: 'Condução de inventário judicial e extrajudicial, partilha de bens e planejamento sucessório.',
-    itens: ['Inventário judicial', 'Inventário extrajudicial', 'Partilha de herança', 'Alvará judicial'],
+    icon: '🤍', titulo: 'Filiação, Adoção e Tutela',
+    desc: 'Atuação jurídica voltada ao reconhecimento de vínculos familiares, adoção, tutela e proteção de direitos.',
+    itens: ['Reconhecimento de paternidade', 'Filiação socioafetiva', 'Adoção nacional e internacional', 'Tutela e curatela'],
   },
   {
-    icon: '📋', titulo: 'Testamentos',
-    desc: 'Elaboração e registro de testamentos, planejamento patrimonial e proteção do patrimônio familiar.',
-    itens: ['Elaboração de testamento', 'Testamento vital', 'Planejamento patrimonial', 'Holding familiar'],
-  },
-  {
-    icon: '👶', titulo: 'Adoção e Tutela',
-    desc: 'Suporte jurídico completo nos processos de adoção, tutela e curatela.',
-    itens: ['Adoção nacional', 'Tutela de menores', 'Curatela', 'Reconhecimento de filiação'],
+    icon: '🚨', titulo: 'Violência Doméstica',
+    desc: 'Atuação jurídica urgente voltada à proteção e segurança da Mulher.',
+    itens: ['Medidas protetivas', 'Acompanhamento jurídico', 'Pedido de afastamento', 'Proteção familiar', ],
   },
   {
     icon: '⚖️', titulo: 'Mediação Familiar',
-    desc: 'Resolução de conflitos familiares de forma consensual, preservando relacionamentos e economizando tempo.',
+    desc: 'Resolução de conflitos familiares de forma consensual, preservando relacionamentos e promovendo soluções equilibradas.',
     itens: ['Mediação de conflitos', 'Acordos extrajudiciais', 'Conciliação familiar', 'Orientação jurídica'],
+  },
+  {
+    icon: '📜', titulo: 'Inventário e Partilha',
+    desc: 'Condução de inventário judicial e extrajudicial, partilha de bens e planejamento sucessório.',
+    itens: ['Inventário judicial', 'Inventário extrajudicial', 'Partilha de bens', 'Alvará judicial',],
   },
 ]
 
 export const depoimentos = [
   {
-    inicial: 'A', nome: 'Ana Paula S.', area: 'Divórcio',
-    texto: 'A Dra. Mylenna foi fundamental no meu processo de divórcio. Além de muito competente, ela me apoiou emocionalmente em um momento tão difícil. Recomendo de olhos fechados.',
+    inicial: 'S', nome: 'Sabrina Krug', area: '',
+    texto: 'Excelente advogada, recomendo pelo profissionalismo e dedicação.',
   },
   {
-    inicial: 'C', nome: 'Carlos M.', area: 'Inventário',
-    texto: 'Contratei a Dra. Mylenna para o inventário após o falecimento da minha mãe. O processo foi conduzido com muita eficiência e sensibilidade. Superou todas as expectativas.',
+    inicial: 'L', nome: 'Laryssa Devos', area: 'Violência Doméstica',
+    texto: 'Excelente advogada! Prestativa, atenciosa, educada!!! Recomendo demais.',
   },
   {
-    inicial: 'F', nome: 'Fernanda L.', area: 'Guarda',
-    texto: 'Excelente profissional! Me ajudou a regularizar a guarda dos meus filhos de forma rápida e sem maiores conflitos. Atendimento humanizado e sempre disponível para esclarecer dúvidas.',
+    inicial: 'D', nome: 'Daniela Santos', area: 'Guarda',
+    texto: 'Ótimo profissional e eu sou grata por ela ser minha advogada, sempre me mostrando que não estou sozinha na luta e principalmente que eu tenho ela para me defender. ❤️',
   },
 ]
 
 export const assuntos = [
   'Divórcio e Separação',
+  'União Estável e Dissolução',
   'Guarda e Alimentos',
-  'Inventário e Herança',
-  'Testamentos',
+  'Guarda e Alimentos Avoengos',
+  'Inventário e Partilha',
+  'Testamentos e Herança',
   'Mediação Familiar',
+  'Violência Doméstica',
 ]
