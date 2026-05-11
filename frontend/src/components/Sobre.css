@@ -57,7 +57,7 @@
 
 /* TEXTO */
 .sobre__texto {
-  font-size: 14px;
+  font-size: 0.9rem;
   color: var(--text-mid);
   line-height: 1.8;
   margin-bottom: 14px;
@@ -84,14 +84,14 @@
 
 .sobre__valor strong {
   display: block;
-  font-size: 13px;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--navy);
   margin-bottom: 2px;
 }
 
 .sobre__valor p {
-  font-size: 12px;
+  font-size: 0.85rem;
   color: var(--text-mid);
   line-height: 1.6;
 }

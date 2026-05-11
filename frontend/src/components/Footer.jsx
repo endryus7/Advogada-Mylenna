@@ -27,6 +27,7 @@ export default function Footer() {
           <strong>Contato</strong>
           <a href={advogada.whatsappLink} target="_blank" rel="noopener noreferrer">WhatsApp</a>
           <a href={`mailto:${advogada.email}`}>{advogada.email}</a>
+          <a href="https://www.instagram.com/mylenna.advogada/" target='_blank'>Instagram</a>
           <span>R. Manoelito de Ornellas, n° 55 - 8° andar - Praia de Belas - Porto Alegre/RS, CEP 90110-230 </span>
         </div>
 
