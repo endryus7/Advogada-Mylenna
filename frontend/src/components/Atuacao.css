@@ -33,14 +33,14 @@
 
 .atuacao__card-titulo {
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: 1.2rem;
   color: var(--navy);
   margin-bottom: 8px;
   font-weight: 500;
 }
 
 .atuacao__card-desc {
-  font-size: 12px;
+  font-size: 0.9rem;
   color: var(--text-mid);
   line-height: 1.7;
   margin-bottom: 16px;
@@ -54,7 +54,7 @@
 }
 
 .atuacao__card-lista li {
-  font-size: 12px;
+  font-size: 0.8rem;
   color: var(--text-mid);
   display: flex;
   align-items: center;
