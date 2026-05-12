@@ -1,8 +1,9 @@
 import { sobreTexto, valores } from '../data/siteData'
 import './Sobre.css'
-import fotoSobre from "../assets/Mylenna.png"
 
 export default function Sobre() {
+  const fotoSobre = "/Mylenna.png";
+
   return (
     <section className="sobre" id="sobre">
       <div className="container sobre__inner">
