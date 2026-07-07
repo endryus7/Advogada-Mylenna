@@ -1,3 +1,4 @@
+import { BadgeCheck } from 'lucide-react'
 import { advogada } from '../data/siteData'
 import './Hero.css'
 import fotoMylenna from '../assets/hero_image.jpg'
@@ -9,6 +10,11 @@ export default function Hero() {
 
         {/* TEXTO */}
         <div className="hero__texto">
+          <div className="hero__badge-oab">
+            <BadgeCheck size={13} strokeWidth={2} />
+            Registrada {advogada.oab}
+          </div>
+
           <h1 className="hero__titulo">
             <span className="hero__titulo-topo">Advocacia</span>
 
@@ -21,9 +27,9 @@ export default function Hero() {
           </h1>
 
           <p className="hero__desc">
-            Dra. Mylenna Montezano oferece atendimento comprometido e humanizado
-            nas áreas de Direito de Família e Sucessões, auxiliando você nos
-            momentos que mais importam.
+            Dra. Mylenna Montezano atua há mais de 7 anos em Direito de Família
+            e Sucessões, com formação em mediação pela Polícia Civil do RS —
+            unindo técnica jurídica e escuta atenta em cada caso.
           </p>
 
           <div className="hero__actions">
@@ -34,27 +40,32 @@ export default function Hero() {
               Conheça a atuação
             </a>
           </div>
+
+          <div className="hero__creds">
+            <div className="hero__cred">
+              <b>7+</b>
+              <span>anos de atuação</span>
+            </div>
+            <div className="hero__cred">
+              <b>6</b>
+              <span>áreas de especialização</span>
+            </div>
+            <div className="hero__cred">
+              <b>FADERGS</b>
+              <span>formação jurídica</span>
+            </div>
+          </div>
         </div>
 
         {/* FOTO */}
         <div className="hero__visual">
           <div className="hero__frame">
-
             <img src={fotoMylenna} alt="Dra. Mylenna Montezano" className="hero__foto" />
 
-            {/* Card flutuante */}
-            <div className="hero__card">
-              <div className="hero__card-avatar">⚖️</div>
-              <div className="hero__card-text">
-                <div className="hero__card-status">
-                  <span className="hero__card-dot" />
-                  <span>Disponível para consulta</span>
-                </div>
-                <strong>Dra. Mylenna Montezano</strong>
-                <span>Família e Sucessões</span>
-              </div>
+            <div className="hero__selo">
+              <BadgeCheck size={14} strokeWidth={2} />
+              {advogada.oab}
             </div>
-
           </div>
         </div>
 

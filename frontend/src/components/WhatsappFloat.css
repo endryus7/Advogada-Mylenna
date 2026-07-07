@@ -1,0 +1,35 @@
+.wa-float {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 500;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #1f4a44;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(15, 42, 82, 0.28);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.wa-float:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(15, 42, 82, 0.34);
+}
+
+@media (max-width: 480px) {
+  .wa-float {
+    width: 48px;
+    height: 48px;
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .wa-float svg {
+    width: 20px;
+    height: 20px;
+  }
+}

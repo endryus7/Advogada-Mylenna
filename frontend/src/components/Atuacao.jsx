@@ -1,16 +1,22 @@
+import { Check } from 'lucide-react'
 import { areasAtuacao } from '../data/siteData'
+import iconMap from './iconMap'
 import './Atuacao.css'
 
 function AreaCard({ area }) {
+  const Icone = iconMap[area.icon]
+
   return (
     <div className="atuacao__card">
-      <div className="atuacao__card-icon">{area.icon}</div>
+      <div className="atuacao__card-icon">
+        <Icone size={22} strokeWidth={1.5} />
+      </div>
       <h3 className="atuacao__card-titulo">{area.titulo}</h3>
       <p className="atuacao__card-desc">{area.desc}</p>
       <ul className="atuacao__card-lista">
         {area.itens.map((item, i) => (
           <li key={i}>
-            <span className="atuacao__check">✓</span>
+            <Check size={12} strokeWidth={2.5} className="atuacao__check" />
             {item}
           </li>
         ))}
