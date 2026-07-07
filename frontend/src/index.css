@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,7 +8,7 @@
   --navy: #0f2a52;
   --navy-light: #1a3a6e;
   --navy-soft: #2a4f8a;
-  --gold: #c8a96e;
+  --gold: #b49b6b;
   --gold-light: #e8d5a8;
   --cream: #f8f6f2;
   --blue-pale: #eaf0fb;

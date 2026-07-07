@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="container navbar__inner">
           <a href="#" className="navbar__logo" onClick={fecharMenu}>
             <span className="navbar__name">{advogada.nome}</span>
-            <span className="navbar__sub">{advogada.oab}</span>
+            <span className="navbar__sub">{advogada.areaFoco}</span>
           </a>
 
           <div className="navbar__links">
@@ -61,7 +61,7 @@ export default function Navbar() {
             <div className="navbar__drawer-header">
               <div className="navbar__logo">
                 <span className="navbar__name">{advogada.nome}</span>
-                <span className="navbar__sub">{advogada.oab}</span>
+                <span className="navbar__sub">{advogada.areaFoco}</span>
               </div>
               <button className="navbar__fechar" onClick={fecharMenu} aria-label="Fechar menu">
                 ✕

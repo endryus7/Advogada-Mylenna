@@ -3,10 +3,21 @@
   background: #fff;
 }
 
-.dep__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.dep__carrossel {
+  position: relative;
+}
+
+.dep__track {
+  display: flex;
   gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+.dep__track::-webkit-scrollbar {
+  display: none;
 }
 
 .dep__card {
@@ -15,13 +26,27 @@
   padding: 28px 24px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
+  flex: 0 0 calc((100% - 40px) / 3);
+  scroll-snap-align: start;
 }
 
-.dep__stars {
-  color: var(--gold);
-  font-size: 13px;
-  letter-spacing: 2px;
+.dep__card--exemplo {
+  background: #fff;
+  border: 1px dashed rgba(15, 42, 82, 0.25);
+}
+
+.dep__tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: rgba(15, 42, 82, 0.08);
+  padding: 4px 10px;
+  border-radius: 20px;
 }
 
 .dep__texto {
@@ -55,21 +80,47 @@
 }
 
 .dep__autor strong {
-  display: block;
   font-size: 13px;
   font-weight: 500;
   color: var(--navy);
 }
 
-.dep__autor span {
-  font-size: 11px;
+.dep__nota {
+  font-size: 10.5px;
   color: var(--text-muted);
+  font-style: italic;
+}
+
+.dep__controles {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.dep__nav {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(15, 42, 82, 0.15);
+  background: #fff;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.dep__nav:hover {
+  border-color: var(--navy);
+  background: var(--blue-pale);
 }
 
 /* TABLET */
 @media (max-width: 900px) {
-  .dep__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .dep__card {
+    flex: 0 0 calc((100% - 20px) / 2);
   }
 }
 
@@ -79,7 +130,7 @@
     padding: 64px 0;
   }
 
-  .dep__grid {
-    grid-template-columns: 1fr;
+  .dep__card {
+    flex: 0 0 85%;
   }
 }

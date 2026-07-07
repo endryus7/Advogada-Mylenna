@@ -29,7 +29,7 @@
 }
 
 .navbar__sub {
-  font-size: 10px;
+  font-size: 0.7rem;
   color: var(--text-muted);
   letter-spacing: 0.08em;
   font-weight: 300;

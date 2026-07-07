@@ -1,8 +1,9 @@
-import { sobreTexto, valores } from '../data/siteData'
+import { GraduationCap, Shield } from 'lucide-react'
+import { sobreTexto } from '../data/siteData'
 import './Sobre.css'
 
 export default function Sobre() {
-  const fotoSobre = "/Mylenna.png";
+  const fotoSobre = "/Mylenna.png"
 
   return (
     <section className="sobre" id="sobre">
@@ -10,7 +11,7 @@ export default function Sobre() {
 
         {/* FOTO */}
         <div className="sobre__foto-wrap">
-          
+
           <img src={fotoSobre} alt="Dra. Mylenna Montezano" className="sobre__foto" />
 
           <div className="sobre__tag">
@@ -30,16 +31,22 @@ export default function Sobre() {
             <p key={i} className="sobre__texto">{p}</p>
           ))}
 
-          <div className="sobre__valores">
-            {valores.map((v, i) => (
-              <div key={i} className="sobre__valor">
-                <span className="sobre__valor-icon">{v.icon}</span>
-                <div>
-                  <strong>{v.titulo}</strong>
-                  <p>{v.desc}</p>
-                </div>
+          <div className="sobre__formacao">
+            <div className="sobre__formacao-item">
+              <GraduationCap size={18} strokeWidth={1.5} />
+              <div>
+                <strong>Faculdade de Desenvolvimento do Rio Grande do Sul</strong>
+                <p>Formação em Direito</p>
               </div>
-            ))}
+            </div>
+
+            <div className="sobre__formacao-item">
+              <Shield size={18} strokeWidth={1.5} />
+              <div>
+                <strong>Polícia Civil do Estado do RS</strong>
+                <p>Mediadora capacitada</p>
+              </div>
+            </div>
           </div>
         </div>
 
