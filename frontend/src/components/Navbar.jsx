@@ -4,15 +4,16 @@ import { advogada } from '../data/siteData'
 import './Navbar.css'
 
 export default function Navbar() {
+  // Controla se o menu mobile está aberto ou fechado
   const [menuAberto, setMenuAberto] = useState(false)
 
+  // Enquanto o menu mobile estiver aberto, trava o scroll da página
   useEffect(() => {
     document.body.style.overflow = menuAberto ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [menuAberto])
 
   function toggleMenu() {
-    console.log('clicou burger, estado atual:', menuAberto)
     setMenuAberto(prev => !prev)
   }
 
@@ -22,6 +23,7 @@ export default function Navbar() {
 
   return (
     <>
+    {/* Barra fixa no topo */}
       <nav className="navbar">
         <div className="container navbar__inner">
           <a href="#" className="navbar__logo" onClick={fecharMenu}>
@@ -29,6 +31,7 @@ export default function Navbar() {
             <span className="navbar__sub">{advogada.areaFoco}</span>
           </a>
 
+          {/* Links */}
           <div className="navbar__links">
             <a href="#sobre"       className="navbar__link">Sobre</a>
             <a href="#atuacao"     className="navbar__link">Atuação</a>
@@ -36,6 +39,7 @@ export default function Navbar() {
             <a href="#contato"     className="navbar__link navbar__cta">Consulta gratuita</a>
           </div>
 
+          {/* Botão hambúrguer */}
           <button
             className={`navbar__hamburger ${menuAberto ? 'aberto' : ''}`}
             onClick={toggleMenu}
@@ -49,14 +53,17 @@ export default function Navbar() {
         </div>
       </nav>
 
+      {/* Menu mobile (drawer) */}
       {createPortal(
         <>
+        {/* Fundo escuro, clicar nele fecha o menu */}
           <div
             className={`navbar__backdrop ${menuAberto ? 'visivel' : ''}`}
             onClick={fecharMenu}
             aria-hidden="true"
           />
 
+          {/* Painel lateral */}
           <div className={`navbar__drawer ${menuAberto ? 'visivel' : ''}`}>
             <div className="navbar__drawer-header">
               <div className="navbar__logo">

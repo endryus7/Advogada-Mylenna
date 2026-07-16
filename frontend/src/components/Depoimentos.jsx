@@ -3,8 +3,10 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { depoimentos } from '../data/siteData'
 import './Depoimentos.css'
 
+// Card individual de depoimento
 function DepCard({ dep }) {
   return (
+    // dep__card--exemplo só é aplicada se dep.exemplo existir
     <div className={`dep__card ${dep.exemplo ? 'dep__card--exemplo' : ''}`}>
       <span className="dep__tag">{dep.area}</span>
       <blockquote className="dep__texto">"{dep.texto}"</blockquote>
@@ -16,14 +18,17 @@ function DepCard({ dep }) {
   )
 }
 
+// Carrossel horizontal de depoimentos
 export default function Depoimentos() {
+  // faixa track que contém os cards
   const trackRef = useRef(null)
 
+  // Rola o carrossel um card de largura para a esquerda ou direita
   function scroll(dir) {
     const track = trackRef.current
     if (!track) return
     const card = track.querySelector('.dep__card')
-    const gap = 20
+    const gap = 20 // bate o gap definido no CSS do .dep__track
     const width = card.offsetWidth + gap
     track.scrollBy({ left: dir * width, behavior: 'smooth' })
   }
@@ -41,12 +46,14 @@ export default function Depoimentos() {
         </div>
 
         <div className="dep__carrossel">
+           {/* Faixa rolável com todos os cards de depoimento */}
           <div className="dep__track" ref={trackRef}>
             {depoimentos.map((dep, i) => (
               <DepCard key={i} dep={dep} />
             ))}
           </div>
 
+          {/* Setas de navegação */}
           <div className="dep__controles">
             <button
               className="dep__nav"
