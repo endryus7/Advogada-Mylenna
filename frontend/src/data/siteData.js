@@ -24,7 +24,8 @@ export const formacao = [
   { icon: 'shield',     titulo: 'Polícia Civil do Estado do RS',                     desc: 'Mediadora capacitada' },
 ]
 
-// Diferenciais 
+// Cards de diferenciais
+// icon chave traduzida pro componente de ícone 
 export const diferenciais = [
   {
     icon: 'graduation',
@@ -43,6 +44,7 @@ export const diferenciais = [
   },
 ]
 
+// Áreas de atuação
 export const areasAtuacao = [
   {
     icon: 'heart', titulo: 'Divórcio e Dissolução de União Estável',
@@ -104,6 +106,7 @@ export const depoimentos = [
   },
 ]
 
+// Opções do <select> no formulário de contato
 export const assuntos = [
   'Divórcio e Separação',
   'União Estável e Dissolução',

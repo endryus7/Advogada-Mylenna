@@ -10,6 +10,7 @@ export default function Hero() {
 
         {/* TEXTO */}
         <div className="hero__texto">
+          {/* Selo com o número da OAB */}
           <div className="hero__badge-oab">
             <BadgeCheck size={13} strokeWidth={2} />
             Registrada {advogada.oab}
@@ -32,6 +33,7 @@ export default function Hero() {
             unindo técnica jurídica e escuta atenta em cada caso.
           </p>
 
+          {/* Leva para o WhatsApp ou rola até a seção Sobre*/}
           <div className="hero__actions">
             <a href={advogada.whatsappLink} className="btn-gold" target="_blank" rel="noopener noreferrer">
               Consulta gratuita
@@ -41,6 +43,7 @@ export default function Hero() {
             </a>
           </div>
 
+          {/* Anos de atuação, áreas, formação */}
           <div className="hero__creds">
             <div className="hero__cred">
               <b>7+</b>

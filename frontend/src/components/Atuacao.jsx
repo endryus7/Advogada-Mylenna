@@ -4,6 +4,7 @@ import iconMap from './iconMap'
 import './Atuacao.css'
 
 function AreaCard({ area }) {
+  // Converte a string do ícone no componente de ícone
   const Icone = iconMap[area.icon]
 
   return (
@@ -25,6 +26,7 @@ function AreaCard({ area }) {
   )
 }
 
+// Seção Áreas de Atuação
 export default function Atuacao() {
   return (
     <section className="atuacao" id="atuacao">

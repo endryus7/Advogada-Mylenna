@@ -6,6 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
 
+        {/* Coluna 1: nome, especialidade e aviso legal */}
         <div className="footer__sobre">
           <span className="footer__nome">{advogada.nome}</span>
           <span className="footer__tagline">{advogada.especialidade}</span>
@@ -15,6 +16,7 @@ export default function Footer() {
           </p>
         </div>
 
+        {/* Coluna 2: links */}
         <div className="footer__col">
           <strong>Navegação</strong>
           <a href="#sobre">Sobre</a>
@@ -23,6 +25,7 @@ export default function Footer() {
           <a href="#contato">Contato</a>
         </div>
 
+        {/* Coluna 3: canais de contato */}
         <div className="footer__col">
           <strong>Contato</strong>
           <a href={advogada.whatsappLink} target="_blank" rel="noopener noreferrer">WhatsApp</a>

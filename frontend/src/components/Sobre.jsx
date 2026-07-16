@@ -27,10 +27,12 @@ export default function Sobre() {
             Comprometida com sua história e seus direitos
           </h2>
 
+          {/* Percorre os parágrafos definidos no siteData */}
           {sobreTexto.map((p, i) => (
             <p key={i} className="sobre__texto">{p}</p>
           ))}
 
+          {/* Cards de formação/mediação */}
           <div className="sobre__formacao">
             <div className="sobre__formacao-item">
               <GraduationCap size={18} strokeWidth={1.5} />

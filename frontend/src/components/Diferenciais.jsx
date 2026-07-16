@@ -7,6 +7,7 @@ export default function Diferenciais() {
     <section className="diferenciais">
       <div className="container diferenciais__grid">
         {diferenciais.map((d, i) => {
+          // traduz a string salva no siteData, no componente de ícone
           const Icone = iconMap[d.icon]
 
           return (

@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import { advogada, assuntos } from '../data/siteData'
 import './Contato.css'
 
+// Lista de canais de contato
 const canais = [
   { icon: Phone,  titulo: 'WhatsApp',              valor: advogada.whatsapp    },
   { icon: Mail,   titulo: 'E-mail',                valor: advogada.email       },
@@ -10,8 +11,11 @@ const canais = [
   { icon: Clock,  titulo: 'Horário de Atendimento', valor: advogada.horario    },
 ]
 
+// Formata o campo telefone no padrão brasileiro
+// Recebe o valor do input e devolve já formatado.
 function mascararTelefone(valor) {
   const nums = valor.replace(/\D/g, '').slice(0, 11)
+  // mantém só números, no máximo 11 dígitos
 
   if (nums.length <= 2)  return nums.replace(/^(\d+)/, '($1')
   if (nums.length <= 6)  return nums.replace(/^(\d{2})(\d+)/, '($1) $2')
@@ -20,6 +24,7 @@ function mascararTelefone(valor) {
   return nums.replace(/^(\d{2})(\d{1})(\d{4})(\d{4})/, '($1) $2 $3-$4')
 }
 
+// Verifica se o telefone tem dígitos suficientes para ser válido
 function validarTelefone(valor) {
   const nums = valor.replace(/\D/g, '')
 
@@ -28,7 +33,9 @@ function validarTelefone(valor) {
   return nums.length >= 10
 }
 
+// Seção contato
 export default function Contato() {
+  //Valores de todos os campos do formulário
   const [form, setForm] = useState({
     nome: '',
     telefone: '',
@@ -37,9 +44,11 @@ export default function Contato() {
     mensagem: '',
   })
 
-  const [erros, setErros] = useState({})
-  const [enviado, setEnviado] = useState(false)
+  const [erros, setErros] = useState({})  //mensagens de erro por campo)
+  const [enviado, setEnviado] = useState(false) //exibição da mensagem de sucesso
 
+
+  // Atualiza o valor do formulário conforme o usuário digita.
   function handleChange(e) {
     const { name, value } = e.target
 
@@ -73,6 +82,8 @@ export default function Contato() {
     }
   }
 
+
+  // Valida todos os campos de uma vez
   function validarTudo() {
     const novosErros = {}
 
@@ -107,6 +118,7 @@ export default function Contato() {
     return Object.keys(novosErros).length === 0
   }
 
+  // Envio do formulário
   async function handleSubmit(e) {
     e.preventDefault()
 
@@ -133,8 +145,9 @@ export default function Contato() {
       )
 
       if (response.ok) {
-        setEnviado(true)
+        setEnviado(true) // mostra a mensagem de sucesso no lugar do formulário
 
+        // Limpa o formulário para um eventual novo envio
         setForm({
           nome: '',
           telefone: '',
@@ -186,7 +199,7 @@ export default function Contato() {
           </div>
         </div>
 
-        {/* FORMULÁRIO */}
+        {/* LADO DIREITO - formulário */}
         <div className="contato__form-wrap">
           <h3 className="contato__form-titulo">
             Consulta gratuita
@@ -272,7 +285,7 @@ export default function Contato() {
                 )}
               </div>
 
-              {/* ASSUNTO */}
+              {/* ASSUNTO opções lista assuntos em siteData */}
               <div className="contato__field">
                 <label>Assunto</label>
 
