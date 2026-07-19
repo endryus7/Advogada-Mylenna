@@ -10,12 +10,6 @@ export default function Hero() {
 
         {/* TEXTO */}
         <div className="hero__texto">
-          {/* Selo com o número da OAB */}
-          <div className="hero__badge-oab">
-            <BadgeCheck size={13} strokeWidth={2} />
-            Registrada {advogada.oab}
-          </div>
-
           <h1 className="hero__titulo">
             <span className="hero__titulo-topo">Advocacia</span>
 

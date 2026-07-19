@@ -35,21 +35,6 @@
   position: relative;
 }
 
-/* Selo OAB acima do título */
-.hero__badge-oab {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(200, 169, 110, 0.15);
-  border: 1px solid rgba(200, 169, 110, 0.3);
-  color: var(--gold-light);
-  font-size: 11.5px;
-  letter-spacing: 0.04em;
-  padding: 6px 15px;
-  border-radius: 20px;
-  margin-bottom: 24px;
-}
-
 .hero__titulo {
   font-size: 48px;
   color: #fff;
