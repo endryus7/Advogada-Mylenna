@@ -23,7 +23,7 @@ export default function Hero() {
 
           <p className="hero__desc">
             Dra. Mylenna Montezano atua há mais de 7 anos em Direito de Família
-            e Sucessões, com formação em mediação pela Polícia Civil do RS —
+            e Sucessões, com formação em mediação pela Polícia Civil do RS
             unindo técnica jurídica e escuta atenta em cada caso.
           </p>
 
