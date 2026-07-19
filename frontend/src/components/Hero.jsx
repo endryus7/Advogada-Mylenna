@@ -10,12 +10,6 @@ export default function Hero() {
 
         {/* TEXTO */}
         <div className="hero__texto">
-          {/* Selo com o número da OAB */}
-          <div className="hero__badge-oab">
-            <BadgeCheck size={13} strokeWidth={2} />
-            Registrada {advogada.oab}
-          </div>
-
           <h1 className="hero__titulo">
             <span className="hero__titulo-topo">Advocacia</span>
 
@@ -29,7 +23,7 @@ export default function Hero() {
 
           <p className="hero__desc">
             Dra. Mylenna Montezano atua há mais de 7 anos em Direito de Família
-            e Sucessões, com formação em mediação pela Polícia Civil do RS —
+            e Sucessões, com formação em mediação pela Polícia Civil do RS
             unindo técnica jurídica e escuta atenta em cada caso.
           </p>
 

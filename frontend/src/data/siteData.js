@@ -30,12 +30,12 @@ export const diferenciais = [
   {
     icon: 'graduation',
     titulo: 'Formação e mediação',
-    desc: 'Advogada formada pela FADERGS e mediadora capacitada pela Polícia Civil do RS — uma combinação pouco comum no Direito de Família.',
+    desc: 'Advogada formada pela FADERGS e mediadora capacitada pela Polícia Civil do RS uma combinação pouco comum no Direito de Família.',
   },
   {
     icon: 'clock',
     titulo: '7 anos dedicados à área',
-    desc: 'Atuação exclusiva em Família e Sucessões, sem dispersão — profundidade em vez de generalismo.',
+    desc: 'Atuação exclusiva em Família e Sucessões, sem dispersão profundidade em vez de generalismo.',
   },
   {
     icon: 'lock',
