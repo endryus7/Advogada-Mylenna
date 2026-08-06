@@ -10,7 +10,7 @@ export default function Sobre() {
       <div className="container sobre__inner">
 
         {/* FOTO */}
-        <div className="sobre__foto-wrap">
+        <div className="sobre__foto-wrap reveal">
 
           <img src={fotoSobre} alt="Dra. Mylenna Montezano" className="sobre__foto" />
 
@@ -21,7 +21,7 @@ export default function Sobre() {
         </div>
 
         {/* TEXTO */}
-        <div className="sobre__conteudo">
+        <div className="sobre__conteudo reveal" style={{ transitionDelay: '120ms' }}>
           <div className="section-label">Quem sou eu</div>
           <h2 className="section-title">
             Comprometida com sua história e seus direitos

@@ -121,7 +121,9 @@
 .contato__field input:focus,
 .contato__field select:focus,
 .contato__field textarea:focus {
-  border-color: var(--navy);
+  border-color: var(--gold);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(47, 128, 184, 0.15);
 }
 
 .contato__submit {
@@ -135,11 +137,14 @@
   border: none;
   cursor: pointer;
   margin-top: 4px;
-  transition: background var(--transition);
+  transition: background var(--transition), transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .contato__submit:hover {
   background: var(--navy-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .contato__aviso {

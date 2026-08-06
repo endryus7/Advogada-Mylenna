@@ -78,34 +78,6 @@ export const areasAtuacao = [
   },
 ]
 
-// Depoimentos
-export const depoimentos = [
-  {
-    inicial: 'S', nome: 'Sabrina Krug', area: 'Atendimento geral',
-    texto: 'Excelente advogada, recomendo pelo profissionalismo e dedicação.',
-  },
-  {
-    inicial: 'L', nome: 'Laryssa Devos', area: 'Violência Doméstica',
-    texto: 'Excelente advogada! Prestativa, atenciosa, educada!!! Recomendo demais.',
-  },
-  {
-    inicial: 'D', nome: 'Daniela Santos', area: 'Guarda',
-    texto: 'Ótimo profissional e eu sou grata por ela ser minha advogada, sempre me mostrando que não estou sozinha na luta e principalmente que eu tenho ela para me defender. ❤️',
-  },
-  {
-    inicial: 'C', nome: 'Camila R.', area: 'Divórcio',
-    texto: 'Me senti segura durante todo o processo, com explicações claras em cada etapa.',
-  },
-  {
-    inicial: 'F', nome: 'Fernanda L.', area: 'Inventário e Partilha', 
-    texto: 'Conduziu o inventário da minha família com muita paciência e clareza.',
-  },
-  {
-    inicial: 'J', nome: 'Juliana M.', area: 'Mediação Familiar',
-    texto: 'Ajudou a chegarmos a um acordo sem desgastar ainda mais a relação da família.',
-  },
-]
-
 // Opções do <select> no formulário de contato
 export const assuntos = [
   'Divórcio e Separação',

@@ -35,7 +35,6 @@ export default function Navbar() {
           <div className="navbar__links">
             <a href="#sobre"       className="navbar__link">Sobre</a>
             <a href="#atuacao"     className="navbar__link">Atuação</a>
-            <a href="#depoimentos" className="navbar__link">Depoimentos</a>
             <a href="#contato"     className="navbar__link navbar__cta">Consulta gratuita</a>
           </div>
 
@@ -79,7 +78,6 @@ export default function Navbar() {
               <a href="#home"        onClick={fecharMenu}>Início</a>
               <a href="#sobre"       onClick={fecharMenu}>Sobre</a>
               <a href="#atuacao"     onClick={fecharMenu}>Atuação</a>
-              <a href="#depoimentos" onClick={fecharMenu}>Depoimentos</a>
               <a href="#contato"     onClick={fecharMenu}>Contato</a>
             </nav>
 

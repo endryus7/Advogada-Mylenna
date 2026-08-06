@@ -21,7 +21,6 @@ export default function Footer() {
           <strong>Navegação</strong>
           <a href="#sobre">Sobre</a>
           <a href="#atuacao">Áreas de Atuação</a>
-          <a href="#depoimentos">Depoimentos</a>
           <a href="#contato">Contato</a>
         </div>
 

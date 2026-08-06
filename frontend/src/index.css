@@ -5,25 +5,36 @@
 }
 
 :root {
-  --navy: #0f2a52;
-  --navy-light: #1a3a6e;
-  --navy-soft: #2a4f8a;
-  --gold: #b49b6b;
-  --gold-light: #e8d5a8;
-  --cream: #f8f6f2;
+  --navy: #0b2942;
+  --navy-light: #14406b;
+  --navy-soft: #235b8f;
+  --gold: #2f80b8;
+  --gold-light: #7fc0ec;
+  --cream: #f5f7fa;
   --blue-pale: #eaf0fb;
-  --text-dark: #0d1f3c;
-  --text-mid: #3a567a;
-  --text-muted: #7a95b8;
+  --text-dark: #101f30;
+  --text-mid: #3d5978;
+  --text-muted: #7891ab;
   --white: #ffffff;
   --font-display: "Playfair Display", Georgia, serif;
   --font-body: "DM Sans", sans-serif;
   --radius-md: 12px;
   --radius-lg: 20px;
   --radius-xl: 32px;
-  --shadow-md: 0 8px 32px rgba(15, 42, 82, 0.1);
-  --shadow-lg: 0 20px 60px rgba(15, 42, 82, 0.14);
+  --shadow-md: 0 8px 32px rgba(11, 41, 66, 0.1);
+  --shadow-lg: 0 20px 60px rgba(11, 41, 66, 0.14);
+  --shadow-gold: 0 12px 28px rgba(47, 128, 184, 0.32);
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::selection {
+  background: var(--gold-light);
+  color: var(--navy);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
 }
 
 html {
@@ -97,6 +108,31 @@ a {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero__titulo {
+    animation: none;
   }
 }
 

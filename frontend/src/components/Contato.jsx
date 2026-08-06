@@ -166,7 +166,7 @@ export default function Contato() {
       <div className="container contato__inner">
 
         {/* LADO ESQUERDO */}
-        <div>
+        <div className="reveal">
           <div className="section-label">Entre em contato</div>
 
           <h2 className="contato__titulo">
@@ -200,7 +200,7 @@ export default function Contato() {
         </div>
 
         {/* LADO DIREITO - formulário */}
-        <div className="contato__form-wrap">
+        <div className="contato__form-wrap reveal" style={{ transitionDelay: '120ms' }}>
           <h3 className="contato__form-titulo">
             Consulta gratuita
           </h3>

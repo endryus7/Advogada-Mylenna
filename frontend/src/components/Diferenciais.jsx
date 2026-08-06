@@ -11,8 +11,14 @@ export default function Diferenciais() {
           const Icone = iconMap[d.icon]
 
           return (
-            <div key={i} className="diferenciais__card">
-              <Icone size={24} strokeWidth={1.5} />
+            <div
+              key={i}
+              className="diferenciais__card reveal"
+              style={{ transitionDelay: `${i * 90}ms` }}
+            >
+              <div className="diferenciais__icon">
+                <Icone size={22} strokeWidth={1.5} />
+              </div>
               <h4>{d.titulo}</h4>
               <p>{d.desc}</p>
             </div>
