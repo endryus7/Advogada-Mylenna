@@ -1,14 +1,16 @@
 import { useEffect } from 'react'
 
-// Observa todos os elementos .reveal da página e adiciona
-// .is-visible quando entram na viewport, criando um efeito
-// de entrada suave ao rolar a página.
 export default function useScrollReveal() {
   useEffect(() => {
-    const elements = document.querySelectorAll('.reveal:not(.is-visible)')
+    const reveal = (el) => {
+      el.style.opacity = '1'
+      el.style.transform = 'none'
+    }
+
+    const elements = document.querySelectorAll('.reveal')
 
     if (!('IntersectionObserver' in window)) {
-      elements.forEach((el) => el.classList.add('is-visible'))
+      elements.forEach(reveal)
       return
     }
 
@@ -16,7 +18,7 @@ export default function useScrollReveal() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible')
+            reveal(entry.target)
             observer.unobserve(entry.target)
           }
         })

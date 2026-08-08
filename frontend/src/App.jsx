@@ -1,8 +1,9 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Diferenciais from './components/Diferenciais'
+import Processo from './components/Processo'
 import Sobre from './components/Sobre'
 import Atuacao from './components/Atuacao'
+import Faq from './components/Faq'
 import Contato from './components/Contato'
 import Footer from './components/Footer'
 import WhatsappFloat from './components/WhatsappFloat'
@@ -16,9 +17,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Diferenciais />
         <Sobre />
         <Atuacao />
+        <Processo />
+        <Faq />
         <Contato />
       </main>
       <Footer />
