@@ -1,17 +1,11 @@
 .hero {
-  background: linear-gradient(
-    135deg,
-    var(--navy) 0%,
-    var(--navy-light) 60%,
-    var(--navy-soft) 100%
-  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 80px 0 0;
   position: relative;
 }
 
-/* Camada decorativa isolada: contém o brilho ambiente sem
-   restringir o overflow do hero inteiro (a barra de credenciais
-   precisa "vazar" para fora da seção). */
 .hero__decor {
   position: absolute;
   inset: 0;
@@ -25,9 +19,16 @@
   position: absolute;
   inset: 0;
   background:
+    linear-gradient(
+      100deg,
+      rgba(9, 33, 54, 0.95) 0%,
+      rgba(9, 33, 54, 0.86) 32%,
+      rgba(9, 33, 54, 0.5) 60%,
+      rgba(9, 33, 54, 0.68) 100%
+    ),
     radial-gradient(
       circle at 72% 20%,
-      rgba(47, 128, 184, 0.22) 0%,
+      rgba(47, 128, 184, 0.2) 0%,
       transparent 52%
     ),
     radial-gradient(
@@ -37,7 +38,6 @@
     );
 }
 
-/* Mancha de luz ambiente, sutil, dá profundidade sem virar decoração */
 .hero__glow {
   position: absolute;
   top: -10%;
@@ -47,16 +47,23 @@
   background: radial-gradient(circle, rgba(127, 192, 236, 0.16) 0%, transparent 70%);
 }
 
+.hero__grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
 .hero__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
   position: relative;
-  padding-bottom: 64px;
+  padding-bottom: 32px;
 }
 
-/* EYEBROW */
 .hero__eyebrow {
   display: inline-block;
   font-size: 11.5px;
@@ -114,7 +121,6 @@
   animation: fadeUp 0.7s ease 0.2s both;
 }
 
-/* Botão */
 .btn-gold {
   display: inline-flex;
   align-items: center;
@@ -161,15 +167,12 @@
   transform: translateY(-2px);
 }
 
-/* FOTO */
 .hero__visual {
   display: flex;
   justify-content: center;
   animation: fadeUp 0.8s ease 0.2s both;
 }
 
-/* Moldura com borda em degradê — mesmo truque de "padding de 1px"
-   que dá o efeito de contorno luminoso sem precisar de imagem extra */
 .hero__frame-wrap {
   width: 340px;
   border-radius: var(--radius-xl);
@@ -195,6 +198,7 @@
   object-fit: cover;
   object-position: center center;
   display: block;
+  filter: saturate(0.88) contrast(1.04);
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -202,26 +206,15 @@
   transform: scale(1.04);
 }
 
-/* SELO OAB */
-.hero__selo {
+.hero__foto-tint {
   position: absolute;
-  top: 14px;
-  right: 14px;
-  background: rgba(10, 25, 45, 0.75);
-  backdrop-filter: blur(8px);
-  color: var(--gold-light);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  padding: 7px 13px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  inset: 0;
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-soft) 100%);
+  mix-blend-mode: color;
+  opacity: 0.28;
+  pointer-events: none;
 }
 
-/* BARRA DE CREDENCIAIS — cartão de vidro que flutua sobre a base do hero */
 .hero__creds-bar-wrap {
   position: relative;
   z-index: 2;
@@ -231,12 +224,11 @@
 .hero__creds-bar {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  grid-template-columns: repeat(4, 1fr);
+  background: linear-gradient(135deg, #17456d 0%, #0b2942 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 24px 50px rgba(9, 33, 54, 0.35);
   overflow: hidden;
   transform: translateY(50%);
 }
@@ -244,8 +236,8 @@
 .hero__cred {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 24px 26px;
+  gap: 12px;
+  padding: 22px 20px;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   transition: background var(--transition);
 }
@@ -272,10 +264,12 @@
 
 .hero__cred b {
   display: block;
-  font-family: var(--font-display);
-  font-size: 19px;
+  font-family: var(--font-body);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+  font-size: 16px;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.3;
 }
 
@@ -289,10 +283,40 @@
   .hero__titulo {
     font-size: 38px;
   }
+
+  .hero__creds-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__cred:nth-child(2) {
+    border-right: none;
+  }
+
+  .hero__cred:nth-child(3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hero__cred:nth-child(4) {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .hero__decor::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(9, 33, 54, 0.93) 0%,
+        rgba(9, 33, 54, 0.9) 100%
+      ),
+      radial-gradient(
+        circle at 50% 15%,
+        rgba(47, 128, 184, 0.16) 0%,
+        transparent 55%
+      );
+  }
+
   .hero {
     padding: 48px 0 0;
   }
@@ -302,6 +326,11 @@
     gap: 40px;
     text-align: center;
     padding-bottom: 40px;
+  }
+
+  .hero__eyebrow {
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
   }
 
   .hero__divider {

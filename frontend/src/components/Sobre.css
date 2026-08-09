@@ -5,23 +5,6 @@
   overflow: hidden;
 }
 
-/* Marca d'água discreta: um traço de balança da justiça,
-   assinatura visual que remete ao universo jurídico sem
-   virar decoração genérica. */
-.sobre::before {
-  content: "";
-  position: absolute;
-  top: -60px;
-  left: -60px;
-  width: 340px;
-  height: 340px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%230f2a52' stroke-width='0.6'%3E%3Cline x1='50' y1='10' x2='50' y2='80'/%3E%3Cline x1='20' y1='24' x2='80' y2='24'/%3E%3Cpath d='M20 24 L10 46 A11 11 0 0 0 30 46 Z'/%3E%3Cpath d='M80 24 L70 46 A11 11 0 0 0 90 46 Z'/%3E%3Cline x1='38' y1='86' x2='62' y2='86'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.05;
-  pointer-events: none;
-}
-
 .sobre__inner {
   display: grid;
   grid-template-columns: 1fr 1.2fr;

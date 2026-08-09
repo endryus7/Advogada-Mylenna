@@ -6,7 +6,7 @@ const icones = [MessageCircle, Search, Scale, ShieldCheck]
 
 export default function Processo() {
   return (
-    <section className="processo">
+    <section className="processo" id='processo'>
       <div className="container">
         <div className="section-header reveal">
           <div className="section-label">Como funciona</div>
@@ -26,11 +26,10 @@ export default function Processo() {
                 className="processo__card reveal"
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
-                <div className="processo__head">
-                  <div className="processo__numero">{String(i + 1).padStart(2, '0')}</div>
-                  <div className="processo__icon">
-                    <Icone size={18} strokeWidth={1.5} />
-                  </div>
+                <span className="processo__etapa">Etapa {String(i + 1).padStart(2, '0')}</span>
+
+                <div className="processo__icon">
+                  <Icone size={22} strokeWidth={1.5} />
                 </div>
 
                 <h4>{p.titulo}</h4>

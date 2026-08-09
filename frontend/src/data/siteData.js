@@ -140,7 +140,7 @@ export const processo = [
   },
   {
     titulo: "Acompanhamento",
-    desc: "Conduzo o processo com atualizações constantes, até a resolução — você nunca fica sem saber em que pé está.",
+    desc: "Conduzo o processo com atualizações constantes, até a resolução você nunca fica sem saber em que pé está.",
   },
 ];
 

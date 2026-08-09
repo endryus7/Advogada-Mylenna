@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+/* Sem isso, ao clicar num link do menu (que é fixo/sticky), a seção
+   pula até encostar EXATAMENTE no topo da tela — ficando escondida
+   atrás do próprio menu. Este respiro empurra a parada pra baixo
+   da barra fixa. */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
 :root {
   --navy: #0b2942;
   --navy-light: #14406b;
@@ -111,7 +119,10 @@ a {
   }
 }
 
-/* SCROLL REVEAL */
+/* ── SCROLL REVEAL ──
+   O estado "revelado" agora é aplicado via estilo inline pelo
+   hook useScrollReveal (não por classe) — veja o comentário lá
+   para o motivo. Esta regra só define o estado inicial/escondido. */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -131,7 +142,7 @@ a {
   }
 }
 
-/* RESPONSIVO GLOBAL */
+/* ── RESPONSIVO GLOBAL ── */
 @media (max-width: 768px) {
   .container {
     padding: 0 20px;
