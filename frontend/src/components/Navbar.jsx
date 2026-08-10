@@ -35,7 +35,7 @@ export default function Navbar() {
           <div className="navbar__links">
             <a href="#home"        className="navbar__link">Início</a>
             <a href="#sobre"       className="navbar__link">Sobre</a>
-            <a href="#atuacao"     className="navbar__link">Atuação</a>
+            <a href="#atuacao"     className="navbar__link">Áreas de Atuação</a>
             <a href="#processo"    className="navbar__link">Como funciona</a>
             <a href="#faq"         className="navbar__link">Dúvidas</a>
             <a href="#contato"     className="navbar__link navbar__cta">Entrar em Contato</a>
