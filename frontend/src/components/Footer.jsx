@@ -19,8 +19,11 @@ export default function Footer() {
         {/* Coluna 2: links */}
         <div className="footer__col">
           <strong>Navegação</strong>
+          <a href="#home">Inicio</a>
           <a href="#sobre">Sobre</a>
           <a href="#atuacao">Áreas de Atuação</a>
+          <a href="#processo">Como funciona</a>
+          <a href="#faq">Dúvidas</a>
           <a href="#contato">Contato</a>
         </div>
 
