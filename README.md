@@ -3,7 +3,7 @@
 > Site desenvolvido para cliente real — Dra. Mylenna Montezano,
 > advogada especialista em Direito de Família e Sucessões.
 
-![preview do projeto](https://github.com/user-attachments/assets/90946c49-d6d1-430e-8d7e-0b91f798c7ea)
+![preview do projeto](https://github.com/user-attachments/assets/11541710-eea2-453a-ba0a-271b47218f8c)
 
 🌐 **[mylennamontezano.com.br](https://www.mylennamontezano.com.br)**
 
