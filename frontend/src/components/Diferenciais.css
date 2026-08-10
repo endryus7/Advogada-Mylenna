@@ -1,5 +1,5 @@
 .diferenciais {
-  padding: 64px 0;
+  padding: 108px 0 64px;
   background: #fff;
   border-bottom: 1px solid rgba(15, 42, 82, 0.08);
 }
@@ -16,12 +16,34 @@
 
 .diferenciais__card {
   background: #fff;
-  padding: 32px 28px;
+  padding: 36px 28px;
+  transition: background var(--transition), transform var(--transition);
+  position: relative;
 }
 
-.diferenciais__card svg {
+.diferenciais__card:hover {
+  background: var(--cream);
+  transform: translateY(-4px);
+}
+
+.diferenciais__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--blue-pale), #fff);
+  border: 1px solid rgba(47, 128, 184, 0.35);
   color: var(--navy-soft);
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.diferenciais__card:hover .diferenciais__icon {
+  transform: scale(1.08) rotate(-4deg);
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 .diferenciais__card h4 {

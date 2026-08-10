@@ -14,21 +14,53 @@
   border-radius: var(--radius-lg);
   padding: 28px 24px;
   border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
   transition:
     border-color var(--transition),
     box-shadow var(--transition),
     transform var(--transition);
 }
 
+.atuacao__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--navy-soft));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
 .atuacao__card:hover {
   border-color: rgba(15, 42, 82, 0.1);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+}
+
+.atuacao__card:hover::before {
+  transform: scaleX(1);
 }
 
 .atuacao__card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--navy);
-  margin-bottom: 14px;
+  background: var(--blue-pale);
+  margin-bottom: 16px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.atuacao__card:hover .atuacao__card-icon {
+  background: var(--navy);
+  color: var(--gold-light);
 }
 
 .atuacao__card-titulo {

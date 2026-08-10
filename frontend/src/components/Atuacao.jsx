@@ -3,12 +3,15 @@ import { areasAtuacao } from '../data/siteData'
 import iconMap from './iconMap'
 import './Atuacao.css'
 
-function AreaCard({ area }) {
+function AreaCard({ area, i }) {
   // Converte a string do ícone no componente de ícone
   const Icone = iconMap[area.icon]
 
   return (
-    <div className="atuacao__card">
+    <div
+      className="atuacao__card reveal"
+      style={{ transitionDelay: `${(i % 3) * 90}ms` }}
+    >
       <div className="atuacao__card-icon">
         <Icone size={22} strokeWidth={1.5} />
       </div>
@@ -41,7 +44,7 @@ export default function Atuacao() {
 
         <div className="atuacao__grid">
           {areasAtuacao.map((area, i) => (
-            <AreaCard key={i} area={area} />
+            <AreaCard key={i} area={area} i={i} />
           ))}
         </div>
       </div>

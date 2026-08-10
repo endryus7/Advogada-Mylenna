@@ -1,6 +1,8 @@
 .sobre {
   padding: 88px 0;
   background: #fff;
+  position: relative;
+  overflow: hidden;
 }
 
 .sobre__inner {
@@ -8,6 +10,7 @@
   grid-template-columns: 1fr 1.2fr;
   gap: 72px;
   align-items: center;
+  position: relative;
 }
 
 /* FOTO */

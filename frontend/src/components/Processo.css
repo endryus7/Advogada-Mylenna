@@ -1,0 +1,111 @@
+.processo {
+  padding: 108px 0 88px;
+  background: var(--cream);
+  border-bottom: 1px solid rgba(15, 42, 82, 0.08);
+}
+
+.processo__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.processo__card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 30px 26px;
+  border: 1px solid rgba(15, 42, 82, 0.07);
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.processo__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--navy-soft));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
+.processo__card:hover {
+  border-color: rgba(15, 42, 82, 0.1);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+}
+
+.processo__card:hover::before {
+  transform: scaleX(1);
+}
+
+.processo__etapa {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.processo__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--blue-pale), #fff);
+  border: 1px solid rgba(47, 128, 184, 0.25);
+  color: var(--navy-soft);
+  margin-bottom: 18px;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.processo__card:hover .processo__icon {
+  transform: scale(1.08) rotate(-4deg);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.processo__card h4 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.processo__card p {
+  font-size: 13.5px;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .processo__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 560px) {
+  .processo {
+    padding: 64px 0;
+  }
+
+  .processo__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}

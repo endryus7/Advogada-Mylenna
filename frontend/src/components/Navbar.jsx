@@ -33,10 +33,12 @@ export default function Navbar() {
 
           {/* Links */}
           <div className="navbar__links">
+            <a href="#home"        className="navbar__link">Início</a>
             <a href="#sobre"       className="navbar__link">Sobre</a>
             <a href="#atuacao"     className="navbar__link">Atuação</a>
-            <a href="#depoimentos" className="navbar__link">Depoimentos</a>
-            <a href="#contato"     className="navbar__link navbar__cta">Consulta gratuita</a>
+            <a href="#processo"    className="navbar__link">Como funciona</a>
+            <a href="#faq"         className="navbar__link">Dúvidas</a>
+            <a href="#contato"     className="navbar__link navbar__cta">Entrar em Contato</a>
           </div>
 
           {/* Botão hambúrguer */}
@@ -79,13 +81,13 @@ export default function Navbar() {
               <a href="#home"        onClick={fecharMenu}>Início</a>
               <a href="#sobre"       onClick={fecharMenu}>Sobre</a>
               <a href="#atuacao"     onClick={fecharMenu}>Atuação</a>
-              <a href="#depoimentos" onClick={fecharMenu}>Depoimentos</a>
-              <a href="#contato"     onClick={fecharMenu}>Contato</a>
+              <a href="#processo"    onClick={fecharMenu}>Como funciona</a>
+              <a href="#faq"         onClick={fecharMenu}>Dúvidas</a>
             </nav>
 
             <div className="navbar__drawer-footer">
               <a href="#contato" className="navbar__overlay-cta" onClick={fecharMenu}>
-                Consulta gratuita
+                Entrar em Contato
               </a>
             </div>
           </div>
