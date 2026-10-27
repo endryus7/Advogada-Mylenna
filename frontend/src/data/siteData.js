@@ -9,7 +9,7 @@ export const advogada = {
   whatsappLink: "https://wa.me/5551993191967",
   email: "montezano.advocacia@gmail.com",
   localizacao:
-    "R. Manoelito de Ornellas, n° 55 - 8° andar - Praia de Belas - Porto Alegre/RS, CEP 90110-230 ",
+    "R Anita Garibaldi, 1650 - Boa VistaPorto Alegre - RS, 90480-200",
   horario: "Segunda à sexta-feira, 9h às 18h",
 };
 
@@ -127,7 +127,7 @@ export const areasAtuacao = [
 // Como funciona o atendimento, do primeiro contato à resolução
 export const processo = [
   {
-    titulo: "Consulta gratuita",
+    titulo: "Agende sua consulta",
     desc: "Conversamos sobre a sua situação, sem compromisso, presencial no escritório em Porto Alegre ou por videochamada.",
   },
   {
@@ -169,7 +169,7 @@ export const faq = [
   {
     pergunta: "Como funciona a primeira consulta?",
     resposta:
-      "A consulta inicial é gratuita e serve para entender sua situação, esclarecer dúvidas e apresentar os possíveis caminhos jurídicos para o seu caso. Pode ser feita presencialmente no escritório em Porto Alegre ou por videochamada.",
+      "A consulta inicial serve para entender sua situação, esclarecer dúvidas e apresentar os possíveis caminhos jurídicos para o seu caso. Pode ser feita presencialmente no escritório em Porto Alegre ou por videochamada.",
   },
   {
     pergunta: "Quais documentos preciso reunir para iniciar um inventário?",

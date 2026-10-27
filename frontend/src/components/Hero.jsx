@@ -79,7 +79,7 @@ export default function Hero() {
             >
               <MessageCircle size={17} strokeWidth={2} />
 
-              <span>Consulta gratuita</span>
+              <span>Agende sua consulta</span>
 
               <ArrowRight
                 size={16}
