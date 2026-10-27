@@ -174,7 +174,7 @@ export default function Contato() {
           </h2>
 
           <p className="contato__desc">
-            A primeira consulta é gratuita. Entre em contato e
+            Entre em contato e
             agende um horário para conversarmos sobre a sua situação
             de forma sigilosa e sem compromisso.
           </p>

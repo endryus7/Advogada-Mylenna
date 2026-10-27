@@ -40,7 +40,7 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
-          <span>© {new Date().getFullYear()} {advogada.nome} — Todos os direitos reservados</span>
+          <span>© {new Date().getFullYear()} {advogada.nome} - Todos os direitos reservados</span>
           <span>{advogada.oab}</span>
         </div>
       </div>
